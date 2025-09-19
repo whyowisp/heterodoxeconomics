@@ -28,96 +28,25 @@ I have been developing a village model to explore how the inhabitants of an isol
 
 ### Mahtikäsky — ajatusharjoitelma leikkauspolitiikasta
 
-> Kuvittele suljettu kylä, jossa on 10 asukasta sekä kylänvanhin majassaan.
->
-> Eräänä päivänä kylänvanhin mahtikäskyllään päättää, että tästä lähtien kaikki kylässä tapahtuvat vaihdot on tehtävä hänen jakamillaan kupongeilla. Omasta kuormasta ei saa enää ottaa, vain vaihtaminen on enää sallittua. Kaksitoista ruoskaniskua sille, joka uhmaa uusia lakeja.
->
-> Kun uudet lait on kirjattu, vanhus jakaa jokaiselle, paitsi itselleen 10 kuponkia, yhteensä siis 100.
+Kuvittele suljettu kylä, jossa on 10 asukasta sekä oma kylänvanhin majassaan.Eräänä päivänä kylänvanhin mahtikäskyllä päättää, että tästä lähtien kaikki kylässä tapahtuvat vaihdot on tehtävä hänen jakamillaan kupongeilla, eikä omasta kuormasta saa enää ottaa.
 
-Kierros 1
+Kun uudet lait on kirjattu, kylänvanhin jakaa jokaiselle, paitsi itselleen 10 kuponkia, yhteensä siis 100.
 
-|       | A1 | A2 | A3 | A4 | A5 | A6 | A7 | A8 | A9 | A10 |
-|-------|----|----|----|----|----|----|----|----|----|-----|
-| Tuotanto | 1  | 1  | 1  | 1  | 1  | 1  | 1  | 1  | 1   | 1   |
-| Kuponkeja| 10 | 10 | 10 | 10 | 10 | 10 | 10 | 10 | 10  | 10  |
+Eräs kyläläisistä keksii tavan tuottaa hyödykkeitä kaksinkertaisella nopeudella. Muut alkavat ostaa juuri häneltä, ja kupongit siirtyvät lopulta kaikki hänen haltuunsa. Rikastuminen motivoi häntä jatkamaan, ja hän tarvitsee pari aputyömiestä, jotka saavat kuponkeja palkaksi ja käyttävät niitä ostaakseen menestyvän kyläläisen tuotteita.
 
-Oletetaan, että tuotanto tässä vaiheessa 1 per asukas. Hyödykkeen arvo määräytyy markkinoilla M1<sub>total</sub>/Q = 100/10 = 10.
-Koska kaikki kyläläiset tuottavat suurin piirtein saman verran, kupongit jakautuvat tasaisesti kaikkien kesken.
+Yrittäjän ongelmaksi muodostuu pian ostovoiman romahtaminen, sillä kyläläisillä ei yksinkertaisesti ole enempää kuponkeja käytettävissään. Kylänvanhin implementoi 1/10 verotuksen ja alkaa kierrättää kuponkeja nääntyville kyläläisille, jotta he voivat jatkaa tuotteiden ostamista.
 
-> Eräs kyläläisistä keksii tavan tuottaa hyödykkeitä kaksinkertaisella nopeudella. Muut alkavat ostaa juuri häneltä, ja kupongit siirtyvät lopulta kaikki hänen haltuunsa. Rikastuminen motivoi häntä jatkamaan, ja hän tarvitsee neljä apumiestä, jotka saavat kuponkeja palkaksi ja käyttävät niitä ostaakseen menestyvän kyläläisen tuotteita.
+Kaikki hyvin.
 
-Oletetaan, että apumiehet kasvattavat tuotantoa vaikkapa 2 kumpikin, koska yrittäjällä on hyvät työvälineet. He saavat palkkoina 15 kukin.
+Naapurikylässä otetaan samanlainen järjestelmä käyttöön. Siellä kuitenkin keksitään menetelmä, joka lisää tuottavuutta kolminkertaiseksi sillä seurauksella, että kotikylänkin kupongit alkavat virrata naapurikylään.
 
-Kierros 2
+Koska kuponkien määrä omassa kylässä vähenee, kylänvanhin alkaa luoda niitä lisää. Hän laskee liikkeelle toiset 100 yksikköä ja jakaa ne tasaisesti kaikille. Nyt molemmilla kylillä on 100 ensimmäisen kylän kuponkia.
 
-|       | Y1 | T2 | T3 | T4 | T5 | A6 | A7 | A8 | A9 | A10 |
-|-------|----|----|----|----|----|----|----|----|----|-----|
-| Tuotanto | 2 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 |
-| Kuponkeja| 10 | 10 | 10 | 10 | 10 | 10 | 10 | 10 | 10  | 10  |
-
-Kierros 3
-
-|       | Y1 | T2 | T3 | T4 | T5 | A6 | A7 | A8 | A9 | A10 |
-|-------|----|----|----|----|----|----|----|----|----|-----|
-| Tuotanto | 2 | 2 | 2 | 2 | 2 | 0 | 0 | 0 | 0 | 0 |
-| Kuponkeja | 80 | 5 | 5 | 5 | 5 | 0 | 0 | 0 | 0 | 0 |
-
-Kierros 3
-
-|       | Y1 | T2 | T3 | T4 | T5 | A6 | A7 | A8 | A9 | A10 |
-|-------|----|----|----|----|----|----|----|----|----|-----|
-| Tuotanto | 2 | 2 | 2 | 2 | 2 | 0 | 0 | 0 | 0 | 0 |
-| Kuponkeja | 60 | 10 | 10 | 10 | 10 | 0 | 0 | 0 | 0 | 0 |
-
-Tässä vaiheessa yrittäjä huomaa, että hänen omat säästönsä kuluvat palkkoihin, joten hän joutuu laskemaan työntekijöiden palkkoja kymmeneen per työläinen.
-
-Työttömien tilanne on huono, ja he alkavat nääntyä. Joko joku keksii uuden tuotteen ja yrityksen, josta tuotot maksetaan lopuille, tai kylänvanhin turvautuu veroihin, *taikka luo lisää kuponkeja*. Hän turvautuu 50% veroon, joka jaetaan köyhimmille.
-
-Kierros 3 vaihe 2: verotus
-
-|       | Y1 | T2 | T3 | T4 | T5 | A6 | A7 | A8 | A9 | A10 |
-|-------|----|----|----|----|----|----|----|----|----|-----|
-| Tuotanto | 2 | 2 | 2 | 2 | 2 | 0 | 0 | 0 | 0 | 0 |
-| Kuponkeja | 20 | 7.5 | 7.5 | 7.5 | 7.5 | 10 | 10 | 10 | 10 | 10 |
-
-Kierros 4
-
-|       | Y1 | T2 | T3 | T4 | T5 | A6 | A7 | A8 | A9 | A10 |
-|-------|----|----|----|----|----|----|----|----|----|-----|
-| Tuotanto | 2 | 2 | 2 | 2 | 2 | 0 | 0 | 0 | 0 | 0 |
-| Kuponkeja | 70 | 7.5 | 7.5 | 7.5 | 7.5 | 0 | 0 | 0 | 0 | 0 |
-
-Kierros 4 vaihe 2: verotus
-
-|       | Y1 | T2 | T3 | T4 | T5 | A6 | A7 | A8 | A9 | A10 |
-|-------|----|----|----|----|----|----|----|----|----|-----|
-| Tuotanto | 2 | 2 | 2 | 2 | 2 | 0 | 0 | 0 | 0 | 0 |
-| Kuponkeja | 35 | 3 | 3.5 | 3 | 3.5 | 10 | 10 | 10 | 10 | 10 |
-
-Kierros 5
-
-|       | Y1 | T2 | T3 | T4 | T5 | A6 | A7 | A8 | A9 | A10 |
-|-------|----|----|----|----|----|----|----|----|----|-----|
-| Tuotanto | 2 | 2 | 2 | 2 | 2 | 0 | 0 | 0 | 0 | 0 |
-| Kuponkeja | 35 | 3 | 3.5 | 3 | 3.5 | 10 | 10 | 10 | 10 | 10 |
-
-Tässä vaiheessa syntyy tilaa uusille yrittäjille jonkin toisen tuotteen kanssa, ja kupongit alkavat jakautua vaikkapa seuraavasti.
-
-Kaikki hyvin tähän asti.
-
-Naapurikylässä otetaan samanlainen järjestelmä käyttöön. Siellä kuitenkin keksitään menetelmä, joka lisää tuottavuutta kolminkertaiseksi. Sillä seurauksella, että kotikylänkin kupongit alkavat virrata naapurikylään.
-
-Koska kuponkien määrä omassa kylässä vähenee, kylänvanhin alkaa luoda niitä lisää. Hän laskee liikkeelle toiset 100 yksikköä ja jakaa ne tasaisesti kaikille.
-
-Nyt molemmilla kylillä on 100 ensimmäisen kylän kuponkia.
-
-Samaan aikaan toinen kekseliäs ensimmäisen kylän yrittäjistä alkaa kilpailla laadulla. Hänen tuotteensa kelpaavat sekä oman, että naapurikylän väelle. Nyt molempien kylien kupongit alkavat virrata hänen taskuihinsa ja hänen tuotteeseensa kohdistuu nyt 200 kupongin arvosta ostovoimaa.
+Samaan aikaan toinen kekseliäs ensimmäisen kylän yrittäjistä alkaa kilpailla laadulla. Hänen tuotteensa kelpaa sekä oman, että naapurikylän väelle. Nyt molempien kylien kupongit alkavat virrata hänen taskuihinsa ja hänen tuotteeseensa kohdistuu nyt 200 kupongin arvosta ostovoimaa.
 
 Kaikki on vieläkin hyvin...
 
-Eräänä päivänä kylänvanhin kuitenkin saa aivotärähdyksen ja päättää, että jokaikinen kuponki on kerättävä ja tuhottava — vaihtoehtoja ei kertakaikkiaan ole. Niinpä hän alkaa verotuksen kautta kerätä oman kylän kuponkeja pois, kunnes lopulta oman kylän kuponkien kokonaismäärä putoaa nollaan.
-
-Kuvitellaan, että naapurikylään jäi lopputilanteessa vielä 10 kuponkia.
+Eräänä päivänä kylänvanhin saa aivotärähdyksen ja päättää, että nyt kaikki kupongit on kerättävä ja tuhottava -- vaihtoehtoja ei ole. Niinpä hän alkaa verotuksen kautta kerätä oman kylän kuponkeja pois, kunnes oman kylän kuponkien kokonaismäärä putoaa nollaan.Kuvitellaan, että naapurikylään jäi lopputilanteessa vielä 10 kuponkia.
 
 1. **Kun austerity on määrätty, miten ja keneltä kupongit otetaan pois?**
 
