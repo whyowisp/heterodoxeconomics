@@ -58,6 +58,33 @@ Eräänä päivänä kylänvanhin saa aivotärähdyksen ja päättää, että ny
 ## 🇬🇧
 
 
+### The Decree — A Thought Experiment on Austerity Politics
 
+Imagine a closed village with ten inhabitants and their elder living in his hut.
+One day, by decree, the elder decides that from now on all exchanges within the village must be carried out using coupons distributed by him, and that no one is allowed to take directly from their own stock anymore.
 
+Once the new rules are in place, the elder distributes ten coupons to each villager, except himself — one hundred in total.
 
+One of the villagers discovers a way to produce goods at twice the usual speed. The others soon begin buying from him, and eventually all the coupons flow into his hands. His growing wealth motivates him to continue, and he hires a couple of helpers. They receive coupons as wages, which they then spend on purchasing the successful villager’s goods.
+
+The entrepreneur’s problem soon becomes a collapse in purchasing power, since the villagers simply have no more coupons to spend. The elder responds by implementing a one-tenth tax and redistributes the collected coupons to the struggling villagers, so that they can continue buying goods.
+
+All is well.
+
+Meanwhile, the neighboring village adopts a similar system. There, however, someone invents a method that triples productivity, with the result that even the home village’s coupons begin to flow into their hands.
+
+Since the number of coupons in the home village is shrinking, the elder decides to create more. He issues another 100 units and distributes them evenly among the villagers. Now both villages hold 100 of the home village’s coupons.
+
+At the same time, another inventive entrepreneur from the first village begins to compete on quality. His products appeal not only to his fellow villagers but also to the neighboring community. Soon, coupons from both villages flow into his hands, and demand for his goods now represents purchasing power worth 200 coupons.
+
+All is still well…
+
+Until one day, the village elder suffers a concussion and suddenly decrees that all coupons must be collected and destroyed — there are no alternatives. Through taxation he begins to draw in the home village’s coupons, until their total supply falls all the way to zero.
+
+Let us imagine that, by the end, the neighboring village still holds 10 of those coupons.
+
+1. **When austerity is imposed, how and from whom are the coupons taken away?**
+
+2. **What happens to the real economy of the home village when the medium of exchange gradually diminishes and eventually disappears entirely?**
+
+3. **Once all of the home village’s coupons have been destroyed, what value remains in the 10 coupons still held by the neighboring village?**
